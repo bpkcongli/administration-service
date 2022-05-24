@@ -12,6 +12,7 @@
     "test": "cross-env NODE_ENV=test jest --watchAll --verbose --runInBand --coverage"
   },
   "dependencies": {
+    "@conglicorp/schema-checker": "^1.0.3",
     "bcrypt": "^5.0.1",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
