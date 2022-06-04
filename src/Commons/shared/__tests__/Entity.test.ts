@@ -25,7 +25,7 @@ describe('Entity abstract class', () => {
     });
 
     it('When two object have same value and same id, it must be equal', () => {
-      const uuid = new UniqueEntityId();
+      const uuid = UniqueEntityId.create();
       const user1 = new User({username: 'user1'}, uuid);
       const user2 = new User({username: 'user2'}, uuid);
       expect(user1.equals(user2)).toEqual(true);

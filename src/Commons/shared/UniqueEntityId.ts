@@ -3,8 +3,12 @@ import {v4 as uuidv4} from 'uuid';
 export default class UniqueEntityId {
   private _uuid: string;
 
-  constructor() {
-    this._uuid = uuidv4();
+  private constructor(id?: string) {
+    this._uuid = id ? id : uuidv4();
+  }
+
+  static create(id?: string) {
+    return new UniqueEntityId(id);
   }
 
   toString(): string {
